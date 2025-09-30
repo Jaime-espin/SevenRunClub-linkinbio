@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SEVEN RUN CLUB</title>
+  <link rel="icon" type="image/png" href="Logo.png">
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #000000;
+      text-align: center;
+      padding: 40px;
+    }
+    .profile-img {
+      width: 120px;
+      border-radius: 50%;
+    }
+    .link {
+      display: block;
+      margin: 15px auto;
+      padding: 12px 20px;
+      width: 80%;
+      background-color: #c90606;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+    }
+    .link:hover {
+      background-color: #eb5f5f;
+    }
+    #titulo{
+        color: whitesmoke;
+        margin-bottom: 10px;
+        font-size: 28px;
+        letter-spacing: 1.5px;
+    }
+    #texto{
+        color: whitesmoke;
+        margin-bottom: 20px;
+        font-size: 14px;
+        line-height: 1.4;
+    }
+    #countdown{
+        background-color: #d40000;
+        padding: 12px;
+        border-radius: 10px;
+        display: inline-block;
+        font-weight: bold;
+    }
+    .humo-rojo {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 0;
+        background: radial-gradient(circle at 50% 50%, rgba(255,0,0,0.05) 0%, transparent 70%);
+        animation: humo 5s infinite ease-in-out;
+        mix-blend-mode: screen;
+        }
+
+    @keyframes humo {
+        0% { background-position: 50% 50%; }
+        50% { background-position: 48% 52%; }
+        100% { background-position: 50% 50%; }
+        }
+
+  </style>
+</head>
+<body>
+    <div class="humo-rojo"></div>
+    <!--<img src="TU-FOTO.jpg" class="profile-img" alt="Tu foto">-->
+    <h1 id="titulo">SEVEN RUN CLUB</h1>
+    <p id="texto">SWEAT IS SEXY SO MOVE YOUR ASS</p>
+    <p id="texto">⏱️ Miércoles 20:00h || Social run</p>
+    <p href="https://maps.app.goo.gl/ET2sRPKJiSorAQVz7" id="texto"> 📍 Granada, Plaza Gran Capitán</p>
+
+    <a href="https://www.instagram.com/sevenrunclub_/" class="link" target="_blank">Instagram</a>
+    <a href="https://www.tiktok.com/@seven.run.club" class="link" target="_blank">TikTok</a>
+    <a href="https://l.instagram.com/?u=https%3A%2F%2Fchat.whatsapp.com%2FB5b4WKRoslM7NT7oTp2a8R%3Ffbclid%3DPAZXh0bgNhZW0CMTEAAacjcaH1NKgqI39__VYESY9vwdk7bvVdYKNr6ZfJWtqu0RLst3aI7yM6ur2jUA_aem_JN57N17IZ3ZEw9Mniihu7Q&e=AT3MyRZfmLke402Y7qRphL6Lzj_F4J3iyjVgNCWWveLCka6zttPXaymnO7CZTzOGSqSO8LMtUql13oDqyRXeJsBh-Kx_ESmQvFmXULAxHpcC7EZtPk21meA" class="link" target="_blank">Whatsapp</a>
+    <a href="https://www.strava.com/clubs/1321230?oq=seve" class="link" target="_blank">Strava</a>
+
+    <h2 id="texto">Próxima quedada:</h2>
+    <div id="countdown" style="font-size: 24px; color: white; margin-bottom: 20px;"></div>
+    <script>
+    function getNextWednesday20() {
+    const now = new Date();
+    const result = new Date(now);
+    
+    // 3 = Miércoles (domingo es 0)
+    const dayOfWeek = 3;
+    const hour = 20;
+
+    result.setHours(hour, 0, 0, 0); // Set hour to 20:00:00.000
+
+    const daysToAdd = (dayOfWeek - now.getDay() + 7) % 7;
+    if (daysToAdd === 0 && now.getHours() >= hour) {
+      // Hoy es miércoles pero ya pasaron las 20:00 → ir al próximo
+      result.setDate(now.getDate() + 7);
+    } else {
+      result.setDate(now.getDate() + daysToAdd);
+    }
+
+    return result;
+  }
+
+  const countdownEl = document.getElementById("countdown");
+
+  function updateCountdown() {
+    const nextWednesday = getNextWednesday20();
+    const now = new Date().getTime();
+    const distance = nextWednesday - now;
+
+    if (distance <= 0) {
+      countdownEl.innerHTML = "¡Es hora de correr!";
+      return;
+    }
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    countdownEl.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+  }
+
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+    </script>
+</body>
+<footer></footer>
+</html>
