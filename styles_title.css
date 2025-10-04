@@ -1,0 +1,86 @@
+/* Estilos generales para la página */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #000000; /* Fondo negro */
+    font-family: 'Arial Black', sans-serif; /* Puedes cambiar por una fuente de escritura a mano */
+    color: #ffffff; /* Color base del texto */
+    overflow: hidden; /* Evita barras de desplazamiento si el texto es muy grande */
+}
+
+/* Contenedor principal para posicionamiento */
+.main-container {
+    position: relative; /* Muy importante: el posicionamiento absoluto de los hijos será relativo a este */
+    display: inline-block; /* Ajusta el tamaño al contenido */
+    text-align: center; /* Centra el texto 'SEVEN' */
+    /* Puedes ajustar el padding si necesitas más espacio alrededor */
+}
+
+/* Estilos para 'SEVEN' (el texto grande de abajo) */
+.seven-text {
+    font-size: 20vw; /* Hazlo muy grande */
+    font-weight: 900;
+    line-height: 0.8; /* Reduce el espacio vertical para que RUN CLUB quede más pegado */
+    text-transform: uppercase;
+    
+    /* Efecto de Outline y Sombreado */
+    color: transparent; /* Fondo transparente */
+    -webkit-text-stroke: 2px #ffffff; /* Borde blanco más grueso */
+    text-stroke: 2px #ffffff;
+    
+    text-shadow: 
+        4px 4px 0 #333,   /* Sombra oscura para profundidad */
+        -4px -4px 0 #333,
+        8px 8px 0 #666; /* Más sombras para el efecto "rayado" */
+    
+    /* Asegura que SEVEN tenga un z-index menor que RUN CLUB si lo necesitas */
+    z-index: 1; 
+}
+
+/* Estilos para 'RUN CLUB' (el texto pequeño superpuesto) */
+.run-club-text {
+    position: absolute; /* Permite posicionarlo libremente */
+    font-size: 5vw; /* Más pequeño */
+    font-weight: 300;
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: 0.8vw; /* Espaciado entre letras */
+    color: #ffffff; /* Color blanco sólido */
+    
+    /* Posicionamiento para superponerlo sobre 'SEVEN' */
+    /* Ajusta estos valores para mover "RUN CLUB" precisamente */
+    top: 50%;     /* Inicia en la mitad vertical de main-container */
+    left: 50%;    /* Inicia en la mitad horizontal de main-container */
+    transform: translate(-50%, -50%); /* Centra el texto en ese punto (50% de su propio tamaño) */
+    
+    /* Ajustes finos para la posición (prueba y error) */
+    margin-top: -5vw; /* Mueve "RUN CLUB" un poco más hacia arriba */
+    margin-left: 0;   /* Ajusta horizontalmente si es necesario */
+
+    /* Asegura que RUN CLUB esté encima de SEVEN */
+    z-index: 2; 
+}
+
+/* Media Queries para ajustar el tamaño en pantallas muy pequeñas o muy grandes */
+@media (max-width: 600px) {
+    .seven-text {
+        font-size: 25vw; /* Más grande en móviles para mejor legibilidad */
+    }
+    .run-club-text {
+        font-size: 7vw;
+        margin-top: -8vw; /* Ajusta la posición vertical para móviles */
+    }
+}
+
+@media (min-width: 1200px) {
+    .seven-text {
+        font-size: 15vw; /* Más pequeño en pantallas grandes si se ve demasiado */
+    }
+    .run-club-text {
+        font-size: 4vw;
+        margin-top: -3vw;
+    }
+}

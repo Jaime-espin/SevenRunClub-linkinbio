@@ -5,130 +5,67 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SEVEN RUN CLUB</title>
   <link rel="icon" type="image/png" href="Logo.png">
-  <style>
-    body {
-      font-family: sans-serif;
-      background: #000000;
-      text-align: center;
-      padding: 40px;
-    }
-    .profile-img {
-      width: 120px;
-      border-radius: 50%;
-    }
-    .link {
-      display: block;
-      margin: 15px auto;
-      padding: 12px 20px;
-      width: 80%;
-      background-color: #c90606;
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-    }
-    .link:hover {
-      background-color: #eb5f5f;
-    }
-    #titulo{
-        color: whitesmoke;
-        margin-bottom: 10px;
-        font-size: 28px;
-        letter-spacing: 1.5px;
-    }
-    #texto{
-        color: whitesmoke;
-        margin-bottom: 20px;
-        font-size: 14px;
-        line-height: 1.4;
-    }
-    #countdown{
-        background-color: #d40000;
-        padding: 12px;
-        border-radius: 10px;
-        display: inline-block;
-        font-weight: bold;
-    }
-    .humo-rojo {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        pointer-events: none;
-        z-index: 0;
-        background: radial-gradient(circle at 50% 50%, rgba(255,0,0,0.05) 0%, transparent 70%);
-        animation: humo 5s infinite ease-in-out;
-        mix-blend-mode: screen;
-        }
-
-    @keyframes humo {
-        0% { background-position: 50% 50%; }
-        50% { background-position: 48% 52%; }
-        100% { background-position: 50% 50%; }
-        }
-
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="humo-rojo"></div>
-    <!--<img src="TU-FOTO.jpg" class="profile-img" alt="Tu foto">-->
-    <h1 id="titulo">SEVEN RUN CLUB</h1>
-    <p id="texto">SWEAT IS SEXY SO MOVE YOUR ASS</p>
-    <p id="texto">⏱️ Miércoles 20:00h || Social run</p>
-    <p href="https://maps.app.goo.gl/ET2sRPKJiSorAQVz7" id="texto"> 📍 Granada, Plaza Gran Capitán</p>
+    <!-- <h1 id="titulo">SEVEN RUN CLUB</h1> -->
 
+    <div class="text-container">
+        <div class="top-text">SEVEN</div>
+        <div class="bottom-text">RUN CLUB</div>
+    </div>
+
+    <p id="texto">SWEAT IS SEXY SO MOVE YOUR ASS</p>
+    
+
+    <article id="meet">
+      <h4 id="texto">Weekly meeting</h4>
+
+      <section style="display: flex; align-items: center; gap: 10px; margin-bottom: 15px;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="red" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-map-pin"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" /><path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z" /></svg>
+        <p id="texto" style="margin: 0;">Granada, Plaza Isábel la Católica</p>
+      </section>
+        
+      <section style="display: flex; align-items: center; gap: 10px; margin-bottom: 15px;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="red" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-calendar-week"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12z" /><path d="M16 3v4" /><path d="M8 3v4" /><path d="M4 11h16" /><path d="M7 14h.013" /><path d="M10.01 14h.005" /><path d="M13.01 14h.005" /><path d="M16.015 14h.005" /><path d="M13.015 17h.005" /><path d="M7.01 17h.005" /><path d="M10.01 17h.005" /></svg>
+        <p id="texto" style="margin: 0;">Todos los miércoles a las 20:00h</p>
+      </section>
+    
+  </article>
+
+  <section style="background-color: rgb(244, 72, 72); border-radius: 8px; display: flex; align-items: center; gap: 15px; margin: 20px auto 15px auto; padding: 5px 20px; min-width: 280px; max-width: 500px; width: 90%; height: 100px auto; box-sizing: border-box; justify-content: center;">
+    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 16px;" class="icon icon-tabler icons-tabler-outline icon-tabler-heart"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" /></svg>
+    <div style="display: flex; flex-direction: column; justify-content: center; align-items: flex-start; gap: 2px;">
+      <h4 style="margin-bottom: 4px; color: white;">Support the club</h4>
+      <p style="margin-top: 0; color:white; text-align: left;">Contribuye a la campaña de crowfunding</p>
+    </div>
+  </section>
+
+
+  <section>
+    <h2 id="texto">Follow us:</h2>
     <a href="https://www.instagram.com/sevenrunclub_/" class="link" target="_blank">Instagram</a>
     <a href="https://www.tiktok.com/@seven.run.club" class="link" target="_blank">TikTok</a>
     <a href="https://l.instagram.com/?u=https%3A%2F%2Fchat.whatsapp.com%2FB5b4WKRoslM7NT7oTp2a8R%3Ffbclid%3DPAZXh0bgNhZW0CMTEAAacjcaH1NKgqI39__VYESY9vwdk7bvVdYKNr6ZfJWtqu0RLst3aI7yM6ur2jUA_aem_JN57N17IZ3ZEw9Mniihu7Q&e=AT3MyRZfmLke402Y7qRphL6Lzj_F4J3iyjVgNCWWveLCka6zttPXaymnO7CZTzOGSqSO8LMtUql13oDqyRXeJsBh-Kx_ESmQvFmXULAxHpcC7EZtPk21meA" class="link" target="_blank">Whatsapp</a>
     <a href="https://www.strava.com/clubs/1321230?oq=seve" class="link" target="_blank">Strava</a>
+  </section> 
 
-    <h2 id="texto">Próxima quedada:</h2>
-    <div id="countdown" style="font-size: 24px; color: white; margin-bottom: 20px;"></div>
-    <script>
-    function getNextWednesday20() {
-    const now = new Date();
-    const result = new Date(now);
-    
-    // 3 = Miércoles (domingo es 0)
-    const dayOfWeek = 3;
-    const hour = 20;
+  <br>
+  <section style="display: flex; gap: 24px; justify-content: center;">
+    <article style="display: flex; flex-direction: column; align-items: center; background-color: #222; border-radius: 8px; padding: 16px 32px; color: white;">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-shirt"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 4l6 2v5h-3v8a1 1 0 0 1 -1 1h-10a1 1 0 0 1 -1 -1v-8h-3v-5l6 -2a3 3 0 0 0 6 0" /></svg>
+      <h4 style="color: white; margin-top: 8px;"><a href="merch.html" target="_blank" style="color: white; text-decoration: none;">Merch</a></h4>
+    </article>
+    <article style="display: flex; flex-direction: column; align-items: center; background-color: #222; border-radius: 8px; padding: 16px 32px; color: white;">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-library-photo"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 3m0 2.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667z" /><path d="M4.012 7.26a2.005 2.005 0 0 0 -1.012 1.737v10c0 1.1 .9 2 2 2h10c.75 0 1.158 -.385 1.5 -1" /><path d="M17 7h.01" /><path d="M7 13l3.644 -3.644a1.21 1.21 0 0 1 1.712 0l3.644 3.644" /><path d="M15 12l1.644 -1.644a1.21 1.21 0 0 1 1.712 0l2.644 2.644" /></svg>
+      <h4 style="color: white; margin-top: 8px;"><a href="gallery.html" target="_blank" style="color: white; text-decoration: none;">Gallery</a></h4>
+    </article>
+  </section>
 
-    result.setHours(hour, 0, 0, 0); // Set hour to 20:00:00.000
-
-    const daysToAdd = (dayOfWeek - now.getDay() + 7) % 7;
-    if (daysToAdd === 0 && now.getHours() >= hour) {
-      // Hoy es miércoles pero ya pasaron las 20:00 → ir al próximo
-      result.setDate(now.getDate() + 7);
-    } else {
-      result.setDate(now.getDate() + daysToAdd);
-    }
-
-    return result;
-  }
-
-  const countdownEl = document.getElementById("countdown");
-
-  function updateCountdown() {
-    const nextWednesday = getNextWednesday20();
-    const now = new Date().getTime();
-    const distance = nextWednesday - now;
-
-    if (distance <= 0) {
-      countdownEl.innerHTML = "¡Es hora de correr!";
-      return;
-    }
-
-    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-    countdownEl.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
-  }
-
-  updateCountdown();
-  setInterval(updateCountdown, 1000);
-    </script>
 </body>
-<footer></footer>
+<footer>
+  <p style="text-align: center; color: #888; font-size: 14px; margin: 16px 0;">
+    &copy; 2025 SEVEN RUN CLUB. All rights reserved.
+  </p>
+</footer>
 </html>

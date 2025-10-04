@@ -1,0 +1,109 @@
+    body {
+      font-family: sans-serif;
+      background: #000000;
+      text-align: center;
+      padding: 40px;
+    }
+
+    .text-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        width: fit-content;
+    }
+
+/* Styling for the word 'SEVEN' */
+    .top-text {
+        font-size: 20vw; /* 'vw' makes it responsive to the screen width */
+        font-weight: 900;
+        line-height: 0.8; /* Reduces space above/below the text */
+        /* Mimicking the sketched-in look with a shadow or outline */
+        text-shadow: 
+        4px 4px 0 #333,   /* Sombra oscura para profundidad */
+        -4px -4px 0 #333,
+        8px 8px 0 #666; /* Más sombras para el efecto "rayado" */
+        color: transparent; /* Makes the main fill transparent */
+        -webkit-text-stroke: 2px #f5f0f0; /* Borde blanco más grueso */
+    }
+
+/* Styling for the words 'RUN CLUB' */
+    .bottom-text {
+        font-size: 10vw; /* Slightly larger to cover the width of 'SEVEN' */
+        font-weight: 300; /* Lighter font to contrast with 'SEVEN' */
+        line-height: 1; 
+        /* Adjust margin to bring the lines closer together, as in the sketch */
+        margin-top: -3vw; 
+        letter-spacing: 0.5vw; /* Adds space between letters */
+        text-transform: uppercase;
+        color: #ffffff;
+    }
+
+
+    .link {
+        display: block;
+        margin: 15px auto;
+        padding: 12px 20px;
+        width: 50%;
+        background-color: #c90606;
+        color: white;
+        text-decoration: none;
+        border-radius: 8px;
+        }
+    .link:hover {
+      background-color: #eb5f5f;
+    }
+
+    .pages{
+        margin-top: 20px auto;
+        margin: 15px auto;
+        padding: 12px 20px;
+        width: 80%;
+        background: rgba(50, 108, 153, 0.41);
+        color: white;
+        text-decoration: none;
+        border-radius: 8px;
+    }
+
+    #titulo{
+        color: whitesmoke;
+        margin-bottom: 10px;
+        font-size: 28px;
+        letter-spacing: 1.5px;
+    }
+    #texto{
+        color: whitesmoke;
+        margin-bottom: 20px;
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    /* Ajustes para reducir el tamaño del artículo y mejorar la legibilidad */
+        #meet {
+          max-width: 520px;
+          margin: 12px auto;
+          padding: 8px 12px;
+          text-align: left;
+          /* fondo más contrastado que la página negra */
+          background: rgba(50, 108, 153, 0.41);
+          /* borde visible y sutil */
+          border: 1px solid rgba(255,255,255,0.12);
+          border-radius: 10px;
+          /* sombra leve para separar visualmente */
+          box-shadow: 0 6px 18px rgba(0,0,0,0.45);
+          backdrop-filter: blur(6px);
+          z-index: 1;
+        }
+        article h4, article p {
+          color: whitesmoke;
+          margin: 6px 0;
+        }
+        article h4 {
+          font-size: 16px;
+          margin-bottom: 4px;
+        }
+        article p {
+          font-size: 13px;
+          line-height: 1.3;
+        }
